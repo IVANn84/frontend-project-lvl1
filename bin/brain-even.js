@@ -1,9 +1,11 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import { userName, receivingName } from '../src/cli.js';
+//  ф -ия случайного числа
 
 const getRandomInt = () => Math.round(Math.random() * 100);
 
+//  ф-ия проверки четности
 const isEven = (number) => number % 2 === 0;
 
 receivingName();
@@ -19,11 +21,11 @@ const statrRound = () => {
     return true;
   }
   console.log(
-    `${userAnsver} is wrong answer ;(. Correct answer was ${correctAnswer}\nLet's try again, ${userName}.`
+    `'${userAnsver}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`
   );
   return false;
 };
-
+// ф-ия цикла игры
 const brainGame = () => {
   for (let i = 0; i < 3; i += 1) {
     const isCorrect = statrRound();
@@ -31,6 +33,6 @@ const brainGame = () => {
       return;
     }
   }
-  console.log(`Congratulations, ${userName}`);
+  console.log(`Congratulations, ${userName}!`);
 };
 brainGame();
