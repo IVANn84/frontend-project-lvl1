@@ -9,7 +9,6 @@ const getRandomInt = () => Math.round(Math.random() * 100);
 const isEven = (number) => number % 2 === 0;
 
 receivingName();
-// console.log('Welcome to the Brain Games!');
 console.log('Answer "yes" if the number is even, otherwise answer "no".');
 const statrRound = () => {
   const number = getRandomInt();
