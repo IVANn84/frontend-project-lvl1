@@ -8,7 +8,7 @@ export const brainCalk = () => {
 
   const number = getRandomInt(15);
   const number1 = getRandomInt(10);
-  console.log(`Qestion: ${number} ${expression} ${number1}`);
+  console.log(`Question: ${number} ${expression} ${number1}`);
   const userAnsver = readlineSync.question('Your answer: ');
 
   let result = 0;
