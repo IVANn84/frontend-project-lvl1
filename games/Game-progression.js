@@ -28,7 +28,7 @@ export const brainProgression = () => {
     return true;
   }
   console.log(
-    `'${userAnsver}' is wrong answer ;(. Correct answer was '${answerTaskProgr}'.\nLet's try again, ${userName}!`
+    `'${userAnsver}' is wrong answer ;(. Correct answer was '${answerTaskProgr}'.\nLet's try again, ${userName}!`,
   );
   return false;
 };

@@ -29,7 +29,7 @@ export const brainGcd = () => {
     return true;
   }
   console.log(
-    `'${userAnsver}' is wrong answer ;(. Correct answer was '${answerTaskGcd}'.\nLet's try again, ${userName}!`
+    `'${userAnsver}' is wrong answer ;(. Correct answer was '${answerTaskGcd}'.\nLet's try again, ${userName}!`,
   );
   return false;
 };

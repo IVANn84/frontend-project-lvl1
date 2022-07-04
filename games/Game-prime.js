@@ -19,7 +19,7 @@ export const brainPrime = () => {
     return true;
   }
   console.log(
-    `'${userAnsver}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`
+    `'${userAnsver}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`,
   );
   return false;
 };

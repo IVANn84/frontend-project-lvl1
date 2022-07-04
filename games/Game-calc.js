@@ -31,7 +31,7 @@ export const brainCalk = () => {
     return true;
   }
   console.log(
-    `'${userAnsver}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`
+    `'${userAnsver}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`,
   );
   return false;
 };
