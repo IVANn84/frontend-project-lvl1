@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import { receivingName } from '../src/index.js';
-import { brainGame } from '../games/Game-gcd.js';
+import gameBrain from '../games/Game-gcd.js';
 
-receivingName();
-brainGame();
+gameBrain();
