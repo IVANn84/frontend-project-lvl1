@@ -1,4 +1,4 @@
-import { getRandomInt, brainGameComm } from '../src/index.js';
+import { getRandomInt, brainGameComm } from '../index.js';
 
 const task = 'What is the result of the expression?';
 const gameBrain = () => {

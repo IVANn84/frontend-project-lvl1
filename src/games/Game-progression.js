@@ -1,8 +1,4 @@
-import {
-  getRandomInt,
-  getRandomIntProgr,
-  brainGameComm,
-} from '../src/index.js';
+import { getRandomInt, getRandomIntProgr, brainGameComm } from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
