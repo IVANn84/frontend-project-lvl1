@@ -1,8 +1,9 @@
-import { getRandomInt, brainGameComm } from '../index.js';
+import { getRandomInt } from '../helpers.js';
+import brainGameComm from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const gameBrain = () => {
+const gameData = () => {
   const number = getRandomInt(31);
   const quest = `Question: ${number}`;
   const isPime = () => {
@@ -16,5 +17,5 @@ const gameBrain = () => {
   const answer = isPime() ? 'yes' : 'no';
   return [answer, quest];
 };
-brainGameComm(task, gameBrain);
-export default gameBrain;
+brainGameComm(task, gameData);
+export default gameData;

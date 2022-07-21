@@ -1,8 +1,9 @@
-import { getRandomInt, getRandomIntProgr, brainGameComm } from '../index.js';
+import { getRandomInt, getRandomIntProgr } from '../helpers.js';
+import brainGameComm from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
-const gameBrain = () => {
+const gameData = () => {
   const initialData = [];
   const countOfElements = getRandomIntProgr(6, 12);
   let i = 0;
@@ -21,6 +22,6 @@ const gameBrain = () => {
   const quest = `Question: ${stringQuestion}`;
   return [taskAnswer, quest];
 };
-brainGameComm(task, gameBrain);
+brainGameComm(task, gameData);
 
-export default gameBrain;
+export default gameData;

@@ -1,7 +1,8 @@
-import { getRandomInt, brainGameComm } from '../index.js';
+import { getRandomInt } from '../helpers.js';
+import brainGameComm from '../index.js';
 
 const task = 'What is the result of the expression?';
-const gameBrain = () => {
+const gameData = () => {
   const operation = ['+', '-', '*'];
   const operand = getRandomInt(3);
   const expression = operation[operand];
@@ -27,6 +28,6 @@ const gameBrain = () => {
   }
   return [String(answer), quest];
 };
-brainGameComm(task, gameBrain);
+brainGameComm(task, gameData);
 
-export default gameBrain;
+export default gameData;

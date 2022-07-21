@@ -1,8 +1,9 @@
-import { getRandomInt, brainGameComm } from '../index.js';
+import { getRandomInt } from '../helpers.js';
+import brainGameComm from '../index.js';
 
 const task = 'Find the greatest common divisor of given numbers.';
 
-const gameBrain = () => {
+const gameData = () => {
   const number1 = getRandomInt(5);
   const number2 = getRandomInt(7);
   const quest = `Question: ${number1} ${number2}`;
@@ -26,5 +27,5 @@ const gameBrain = () => {
   const answer = String(taskGcd());
   return [answer, quest];
 };
-brainGameComm(task, gameBrain);
-export default gameBrain;
+brainGameComm(task, gameData);
+export default gameData;

@@ -1,21 +1,16 @@
 import readlineSync from 'readline-sync';
 
-export const getRandomInt = (max) => Math.floor(Math.random() * max);
+const brainGameComm = (task, gameData) => {
+  console.log('Welcome to the Brain Games!');
 
-export const getRandomIntProgr = (min, max) => Math.floor(Math.random() * (max - min) + min);
-
-export const brainGameComm = (task, gameBrain) => {
-  const userName = readlineSync.question(
-    'Welcome to the Brain Games!\nMay I have your name?',
-  );
+  const userName = readlineSync.question('May I have your name?');
   console.log(`Hello, ${userName}!`);
   console.log(task);
 
   const statrRound = () => {
-    const resultGame = gameBrain();
-    const [a, q] = resultGame;
-    console.log(q);
-    const correctAnswer = a;
+    const [correctAnswer, question] = gameData();
+    console.log(question);
+    // const counterRound = 3;
 
     const userAnsver = readlineSync.question('Your answer: ');
     if (userAnsver === correctAnswer) {
@@ -27,7 +22,8 @@ export const brainGameComm = (task, gameBrain) => {
     );
     return false;
   };
-  for (let i = 0; i < 3; i += 1) {
+  const counterRound = 3;
+  for (let i = 0; i < counterRound; i += 1) {
     const isCorrect = statrRound();
     if (!isCorrect) {
       return;
@@ -35,3 +31,4 @@ export const brainGameComm = (task, gameBrain) => {
   }
   console.log(`Congratulations, ${userName}!`);
 };
+export default brainGameComm;
