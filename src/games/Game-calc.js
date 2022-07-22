@@ -1,18 +1,9 @@
-import { getRandomInt } from '../helpers.js';
+import { numbersDataGames } from '../helpers.js';
 import brainGameComm from '../index.js';
 
 const task = 'What is the result of the expression?';
-const gameData = () => {
-  const operation = ['+', '-', '*'];
-  const operand = getRandomInt(3);
-  const expression = operation[operand];
-
-  const number = getRandomInt(15);
-  const number1 = getRandomInt(10);
-  const quest = `Question: ${number} ${expression} ${number1}`;
-
+const calculator = (number, number1, expression) => {
   let answer = 0;
-
   switch (expression) {
     case '+':
       answer = number + number1;
@@ -26,6 +17,18 @@ const gameData = () => {
     default:
       answer = null;
   }
+  return answer;
+};
+const gameData = () => {
+  const operation = ['+', '-', '*'];
+  const operand = numbersDataGames(3);
+  const expression = operation[operand];
+
+  const number = numbersDataGames(15);
+  const number1 = numbersDataGames(10);
+  const quest = `Question: ${number} ${expression} ${number1}`;
+  const answer = calculator(number, number1, expression);
+
   return [String(answer), quest];
 };
 brainGameComm(task, gameData);
