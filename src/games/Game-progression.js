@@ -1,30 +1,27 @@
-import { numbersDataGames, numbersDataRange } from '../helpers.js';
-import brainGameComm from '../index.js';
+import { createDataGames, createDataRange } from '../helpers.js';
+import brainGameRun from '../index.js';
 
 const task = 'What number is missing in the progression?';
 
 const createProgression = (countOfElements, stepProgression) => {
   const initialData = [];
-  let startNumber = numbersDataGames(10);
-  let i = 0;
-  while (i <= countOfElements) {
+  let startNumber = createDataGames(10);
+  for (let i = 0; i <= countOfElements; i += 1) {
     initialData.push(startNumber + stepProgression);
-    i += 1;
     startNumber += stepProgression;
   }
   return initialData;
 };
 const gameData = () => {
-  const countOfElements = numbersDataRange(6, 12);
-  const stepProgression = numbersDataRange(1, 7);
-  const indexRandomReplace = numbersDataRange(0, countOfElements); // creating replace
+  const countOfElements = createDataRange(6, 12);
+  const stepProgression = createDataRange(1, 7);
+  const indexRandomReplace = createDataRange(0, countOfElements); // creating replace
   const arrayProgression = createProgression(countOfElements, stepProgression);
   const taskAnswer = String(arrayProgression[indexRandomReplace]);
   arrayProgression[indexRandomReplace] = '..';
-  const stringQuestion = arrayProgression.join(' ');
-  const quest = `Question: ${stringQuestion}`;
-  return [taskAnswer, quest];
+  const question = `Question: ${arrayProgression.join(' ')}`;
+  return [taskAnswer, question];
 };
-brainGameComm(task, gameData);
+brainGameRun(task, gameData);
 
 export default gameData;

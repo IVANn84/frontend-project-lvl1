@@ -1,5 +1,5 @@
-import { numbersDataGames } from '../helpers.js';
-import brainGameComm from '../index.js';
+import { createDataGames } from '../helpers.js';
+import brainGameRun from '../index.js';
 
 const task = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 const isPime = (number) => {
@@ -14,10 +14,10 @@ const isPime = (number) => {
   return number > 1;
 };
 const gameData = () => {
-  const number = numbersDataGames(31);
-  const quest = `Question: ${number}`;
+  const number = createDataGames(31);
+  const question = `Question: ${number}`;
   const answer = isPime(number) ? 'yes' : 'no';
-  return [answer, quest];
+  return [answer, question];
 };
-brainGameComm(task, gameData);
+brainGameRun(task, gameData);
 export default gameData;

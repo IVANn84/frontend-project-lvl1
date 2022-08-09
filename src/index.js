@@ -1,6 +1,6 @@
 import readlineSync from 'readline-sync';
 
-const brainGameComm = (task, gameData) => {
+const brainGameRun = (task, gameData) => {
   console.log('Welcome to the Brain Games!');
 
   const userName = readlineSync.question('May I have your name?');
@@ -24,4 +24,4 @@ const brainGameComm = (task, gameData) => {
   console.log(`Congratulations, ${userName}!`);
 };
 
-export default brainGameComm;
+export default brainGameRun;

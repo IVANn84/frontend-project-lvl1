@@ -1,5 +1,5 @@
-import { numbersDataGames } from '../helpers.js';
-import brainGameComm from '../index.js';
+import { createDataGames } from '../helpers.js';
+import brainGameRun from '../index.js';
 
 const receive = 'Find the greatest common divisor of given numbers.';
 
@@ -19,11 +19,11 @@ const receiveGcd = (number1, number2) => {
   return x;
 };
 const gameData = () => {
-  const number1 = numbersDataGames(5);
-  const number2 = numbersDataGames(7);
-  const quest = `Question: ${number1} ${number2}`;
+  const number1 = createDataGames(5);
+  const number2 = createDataGames(7);
+  const question = `Question: ${number1} ${number2}`;
   const answer = String(receiveGcd(number1, number2));
-  return [answer, quest];
+  return [answer, question];
 };
-brainGameComm(receive, gameData);
+brainGameRun(receive, gameData);
 export default gameData;
